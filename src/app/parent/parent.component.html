@@ -1,0 +1,6 @@
+<div>
+  <p>Rendering child component with data from parent to child</p>
+  <app-child [childMessage]="parentMessage" (messageEvent)="receiveMessageFromParent($event)"></app-child>
+</div>
+
+<p *ngIf="childMessage">Child to parent via @viewChild: {{childsMessage}}</p>
